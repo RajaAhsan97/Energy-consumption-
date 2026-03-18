@@ -30,6 +30,14 @@ jobs:
     - name: Check model file size
       run: ls -lh models/RandomForest.pkl
 
+    - name: Checkout repo
+      uses: actions/checkout@v3
+      with:
+        lfs: true
+
+    - name: Pull LFS files
+      run: git lfs pull
+
     - name: Run basic test (import check)
       run: |
         python -c "import src.api.app"
