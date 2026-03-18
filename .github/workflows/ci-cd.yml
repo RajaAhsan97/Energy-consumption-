@@ -27,6 +27,9 @@ jobs:
       run: |
         pip install -r requirements.txt
 
+    - name: Check model file size
+      run: ls -lh models/RandomForest.pkl
+
     - name: Run basic test (import check)
       run: |
         python -c "import src.api.app"
