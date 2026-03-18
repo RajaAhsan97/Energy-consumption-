@@ -12,6 +12,8 @@ def test_predict():
 
         response = client.post("/predict", json=payload)
 
+        print("Response JSON:", response.json())
+
         assert response.status_code == 200
         data = response.json()
         assert "predicted_global_active_power" in data
