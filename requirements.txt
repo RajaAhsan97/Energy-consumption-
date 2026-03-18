@@ -1,0 +1,9 @@
+pandas
+numpy==1.26.4
+joblib
+scikit-learn
+mlflow
+fastapi
+uvicorn
+pytest
+httpx
