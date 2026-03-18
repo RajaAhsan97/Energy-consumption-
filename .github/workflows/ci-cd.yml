@@ -55,4 +55,4 @@ jobs:
         docker build -t ${{ secrets.DOCKER_USERNAME }}/energy_api:latest .
 
     - name: Push Docker image
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/energy-api:latest
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/energy_api:latest
