@@ -52,7 +52,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/energy_api .
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/energy_api:latest .
 
     - name: Push Docker image
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/energy-api
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/energy-api:latest
