@@ -42,8 +42,11 @@ jobs:
       run: |
         python -c "import src.api.app"
 
+
     # Run API tests
     - name: Run API tests
+      env:
+        PYTHONPATH: .
       run: |
         pytest
 
